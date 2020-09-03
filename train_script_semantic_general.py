@@ -53,19 +53,20 @@ metric = custom_metrics.dice_coef
 epochs = 100
 batch_size = 3
 
+# augmentations
 aug_fn_args_stargardt = [(aug.no_aug, {}), (aug.gaussian_noise_aug, {'variance': 'random', 'min': 250, 'max': 1000}), (aug.flip_aug, {'flip_type': 'left-right'}),
                (aug.combo_aug, [(aug.gaussian_noise_aug, {'variance': 'random', 'min': 250, 'max': 1000}), (aug.flip_aug, {'flip_type': 'left-right'})])]
-aug_fn_args_stargardt_na = [(aug.no_aug, {})]
-
 aug_mode_stargardt = 'one'
 aug_probs_stargardt = (0.25, 0.25, 0.25, 0.25)
 aug_val_stargardt = False
 aug_fly_stargardt = True
 
-aug_mode_na = 'none'
-aug_probs_na = []
-aug_val_na = False
-aug_fly_na = False
+# no augmentations
+aug_fn_args_stargardt_na = [(aug.no_aug, {})]
+aug_mode_stargardt_na = 'none'
+aug_probs_stargardt_na = []
+aug_val_stargardt_na = False
+aug_fly_stargardt_na = False
 
 
 train_params = tparams.TrainingParams(model_residual_scSE, opt_con, opt_params, loss, metric, epochs, batch_size, model_save_best=True, aug_fn_args=aug_fn_args_stargardt, aug_mode=aug_mode_stargardt,
