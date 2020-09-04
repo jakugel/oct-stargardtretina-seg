@@ -6,7 +6,6 @@ import custom_metrics
 from keras.models import load_model
 import image_database as imdb
 import dataset_construction
-import dataset_load
 import parameters
 from keras.utils import to_categorical
 
