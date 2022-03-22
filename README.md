@@ -1,4 +1,5 @@
 # oct-stargardtretina-seg
+Code for the paper "Retinal Boundary Segmentation in Stargardt Disease Optical Coherence Tomography Images Using Automated Deep Learning"
 
 # Dependencies
 * Python 3.6.4
